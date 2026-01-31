@@ -1,0 +1,256 @@
+/* GENERAL STYLES */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* HEADER */
+.header {
+  position: relative;
+  background: #ffcc00; /* MTN yellow */
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+}
+
+/* DARK MODE TOGGLE BUTTON */
+.dark-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #ffcc00;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+.dark-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* NOTICE BOX */
+.notice {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* STEPS CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  padding: 15px;
+}
+.card {
+  background: #ffcc00;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* CTA BUTTON */
+.btn, form button {
+  display: block;
+  margin: 20px;
+  padding: 15px;
+  background: #000;
+  color: #ffcc00;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  width: calc(100% - 40px);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn:hover, form button:hover {
+  background: #333;
+  color: #ffcc00;
+}
+
+/* PRODUCTS SECTION */
+.products {
+  padding: 20px;
+}
+.product {
+  background: #ffcc00;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.product:hover {
+  transform: scale(1.03);
+}
+.product button {
+  width: 100%;
+  padding: 12px;
+  background: #000;
+  color: #ffcc00;
+  border: none;
+  border-radius: 8px;
+}
+
+/* FORMS */
+form {
+  padding: 20px;
+}
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[readonly] {
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+/* EDIT ORDER LINK */
+.edit-order {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.edit-order a {
+  padding: 12px 20px;
+  background: #000;
+  color: #ffcc00;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background 0.2s;
+}
+.edit-order a:hover {
+  background: #333;
+}
+
+/* SUCCESS PAGE */
+.success {
+  text-align: center;
+  padding: 40px 20px;
+}
+.mtn-success {
+  background: #ffcc00;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.success-card {
+  background: #000;
+  color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+.success-card h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+.whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+.thanks {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+}
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* DARK MODE STYLES */
+body.dark-mode {
+  background: #121212;
+  color: #fff;
+}
+body.dark-mode header {
+  background: #000;
+  color: #ffcc00;
+}
+body.dark-mode .card,
+body.dark-mode .product,
+body.dark-mode .success-card {
+  background: #222;
+  color: #ffcc00;
+}
+body.dark-mode input {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+body.dark-mode footer {
+  background: #111;
+  color: #ffcc00;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+  .cards { grid-template-columns: 1fr; }
+  .header h1 { font-size: 1.2em; }
+  .product h3 { font-size: 1em; }
+  .btn, form button { font-size: 0.9em; padding: 12px; }
+  .dark-toggle { width: 35px; height: 35px; font-size: 18px; top: 15px; right: 15px; }
+}

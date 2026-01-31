@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Order</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <h1>Complete Order</h1>
+  <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+</header>
+
+<section class="notice">
+  ⚠️ <b>Important Notice:</b><br>
+  Your data bundle will be delivered within 30 minutes to 1 hour after payment.
+  Please confirm all details.
+</section>
+
+<form action="https://formsubmit.co/asahteddyohene077@gmail.com" method="POST" id="orderForm">
+
+  <input type="hidden" name="_subject" value="New MTN Data Bundle Order">
+  <input type="hidden" name="_captcha" value="false">
+
+  <label>Selected Bundle</label>
+  <input type="text" name="Bundle" id="bundle" readonly>
+
+  <label>Amount (GHS)</label>
+  <input type="text" name="Amount" id="amountDisplay" readonly>
+
+  <input type="text" name="Customer Name" placeholder="Full Name" required>
+  <input type="email" name="Customer Email" placeholder="Email Address" required>
+  <input type="tel" name="Phone" placeholder="Phone Number" required>
+  <input type="tel" name="WhatsApp Number" placeholder="WhatsApp Number" required>
+  <input type="tel" name="Receiving Number" placeholder="MTN Number to Receive Data" required>
+
+  <button type="button" onclick="payWithPaystack()">Proceed to Payment</button>
+</form>
+
+<div class="edit-order">
+  <a href="bundles.html">✏️Edit Order</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

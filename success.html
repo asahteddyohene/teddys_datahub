@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Successful</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>Payment Successful</h1>
+  <button id="darkModeToggle" class="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+</header>
+
+<div class="success mtn-success">
+  <div class="success-card">
+    <h2>✅Thank You!</h2>
+    <p>Your payment has been completed successfully.</p>
+
+    <p>Click the button below to notify us on WhatsApp so your data can be processed immediately.</p>
+
+    <a id="whatsappBtn" class="whatsapp-btn">💬Chat on WhatsApp</a>
+
+    <p class="thanks">Teddy's Non-Expiry Data Bundles</p>
+  </div>
+</div>
+
+<script>
+  const bundle = localStorage.getItem("bundle") || "";
+  const receivingNumber = localStorage.getItem("receivingNumber") || "";
+
+  const whatsappNumber = "233591372690"; // YOUR WhatsApp number (no +)
+
+  const message = encodeURIComponent(
+    `Hello, I purchased ${bundle}.\n` +
+    `Payment has been completed.\n` +
+    `Receiving number: ${receivingNumber}`
+  );
+
+  document.getElementById("whatsappBtn").href =
+    `https://wa.me/${whatsappNumber}?text=${message}`;
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
